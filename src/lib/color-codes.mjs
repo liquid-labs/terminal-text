@@ -1,4 +1,4 @@
-const validStyles = [ 'dark', 'light', 'greenOnBlack' ]
+const validStyles = ['dark', 'light', 'greenOnBlack']
 
 // https://misc.flogisoft.com/bash/tip_colors_and_formatting
 // for testing:
