@@ -3,8 +3,16 @@
   "version": "1.0.0-alpha.0",
   "description": "",
   "main": "dist/terminal-text.js",
+  "bin": {
+    "terminal-text": "./dist/terminal-text.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "make",
+    "lint": "make lint",
+    "lint:fix": "make lint-fix",
+    "test": "make test",
+    "preversion": "make test && make lint",
+    "qa": "make qa"
   },
   "keywords": [],
   "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
@@ -13,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/liquid-labs/terminal-text/issues"
   },
-  "homepage": "https://github.com/liquid-labs/terminal-text#readme"
+  "homepage": "https://github.com/liquid-labs/terminal-text#readme",
+  "devDependencies": {
+    "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.57"
+  },
+  "dependencies": {
+    "http-errors": "^2.0.0"
+  }
 }
