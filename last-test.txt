@@ -1,0 +1,30 @@
+PASS test-staging/lib/test/format-terminal-text.test.js
+  formatTerminalText
+    semantic formatting
+      ✓ supports 'default' style (1 ms)
+      ✓ supports 'dark' style
+      ✓ supports 'light' style
+      ✓ defaults to dark style
+      ✓ dark and light styles differ
+      ✓ supports escaping formatting tags
+    256 ansi color formatting
+      ✓ processes foreground colors (1 ms)
+      ✓ processes background colors
+      ✓ supports escaping formatting tags
+    16.8M RGB color support
+      ✓ processes foreground colors
+      ✓ processes background colors (1 ms)
+      ✓ supports escaping formatting tags
+
+--------------------------|---------|----------|---------|---------|-------------------
+File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------|---------|----------|---------|---------|-------------------
+All files                 |   96.15 |    88.88 |     100 |   94.44 |                   
+ color-codes.mjs          |     100 |      100 |     100 |     100 |                   
+ format-terminal-text.mjs |   95.45 |    88.88 |     100 |   92.85 | 7                 
+--------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        0.186 s, estimated 1 s
+Ran all test suites matching /.\/test-staging/i.
