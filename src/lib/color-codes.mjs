@@ -1,3 +1,5 @@
+const validStyles = [ 'dark', 'light', 'greenOnBlack' ]
+
 // https://misc.flogisoft.com/bash/tip_colors_and_formatting
 // for testing:
 // function colors() { local i=1; while (( $i <= $# )); do printf "\e[48;5;${!i}m "; i=$(( $i + 1 )); done; printf "\e[0m\n"; }
@@ -69,4 +71,4 @@ const colorCodes = {
   bgForestGreen : { '*' : '\x1b[48;5;22m' }
 }
 
-export { colorCodes }
+export { colorCodes, validStyles }
