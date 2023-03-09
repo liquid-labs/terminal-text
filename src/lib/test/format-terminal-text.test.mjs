@@ -19,6 +19,12 @@ describe('formatTerminalText', () => {
     test('defaults to dark style', () => expect(terminalTextDefault === terminalTextDark).toBe(true))
 
     test('dark and light styles differ', () => expect(terminalTextDark !== terminalTextLight).toBe(true))
+
+    test('supports escaping formatting tags', () => {
+      const escText = 'Hi! \\<em>Test text\\<rst> there.'
+      const fText = formatTerminalText(escText)
+      expect(fText).toBe(escText)
+    })
   })
 
   describe('256 ansi color formatting', () => {
@@ -32,6 +38,12 @@ describe('formatTerminalText', () => {
       const ansiBgText = 'Hi! <bac:230>Test text<rst> there.'
       const fText = formatTerminalText(ansiBgText)
       expect(fText).toMatch(/Hi! \x1b\[48;5;230mTest text\x1b\[0m there/) // eslint-disable-line no-control-regex
+    })
+
+    test('supports escaping formatting tags', () => {
+      const escText = 'Hi! \\<fac:118>Test text\\<rst> there.'
+      const fText = formatTerminalText(escText)
+      expect(fText).toBe(escText)
     })
   })
 
@@ -47,6 +59,12 @@ describe('formatTerminalText', () => {
       const fText = formatTerminalText(rgbBgText)
       // eslint-disable-next-line no-control-regex
       expect(fText).toMatch(/Hi! \x1b\[48;2;200;205;210mTest text\x1b\[0m there/)
+    })
+
+    test('supports escaping formatting tags', () => {
+      const escText = 'Hi! \\<frgb:118.202.53>Test text\\<rst> there.'
+      const fText = formatTerminalText(escText)
+      expect(fText).toBe(escText)
     })
   })
 })
