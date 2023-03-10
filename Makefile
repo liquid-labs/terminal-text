@@ -36,7 +36,11 @@ $(LIB): $(LIB_SRC_FILES)
 	JS_SRC=$(LIB_SRC) $(CATALYST_SCRIPTS) build
 
 $(CLI): $(CLI_SRC_FILES)
-	JS_SRC=$(CLI_SRC) $(CATALYST_SCRIPTS) build
+	JS_SRC=$(CLI_SRC) JS_OUT=$(CLI).tmp $(CATALYST_SCRIPTS) build
+	echo '#!/usr/bin/env node' > $(CLI)
+	cat $(CLI).tmp >> $(CLI)
+	rm $(CLI).tmp
+	chmod a+x $(CLI)
 
 # test rules
 $(TEST_BUILT_FILES) &: $(ALL_SRC_FILES)
@@ -60,3 +64,5 @@ lint-fix:
 
 # qa
 qa: test lint
+
+# examples
