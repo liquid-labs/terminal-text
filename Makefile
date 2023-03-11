@@ -22,7 +22,7 @@ LIB_SRC:=$(SRC)/lib
 LIB_SRC_FILES:=$(shell find $(LIB_SRC) -name "*.js" -o -name "*.mjs" -not -name "*.test.*")
 
 CLI_SRC:=$(SRC)/cli
-CLI_SRC_FILES:=$(shell find $(CLI_SRC) -name "*.js" -o -name "*.mjs" -not -name "*.test.*")
+CLI_SRC_FILES:=$(shell find $(SRC) -name "*.js" -o -name "*.mjs" -not -name "*.test.*")
 
 ALL_SRC_FILES:=$(shell find $(SRC) -name "*.js" -o -name "*.mjs")
 TEST_BUILT_FILES=$(patsubst %.mjs, %.js, $(patsubst $(SRC)/%, test-staging/%, $(ALL_SRC_FILES)))
