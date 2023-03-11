@@ -12,12 +12,15 @@ const formatTerminalText = (tText, { style = 'dark' } = {}) => {
     const replacer = new RegExp('(^|[^\\\\])<' + key + '>', 'g')
     tText = tText.replaceAll(replacer, '$1' + (styles[style] || styles['*']))
   }
-  // general color code support for ansi colors:
-  tText = tText.replaceAll(/(^|[^\\\\])<fac:(\d+)>/g, '$1\x1b[38;5;$2m')
-  tText = tText.replaceAll(/(^|[^\\\\])<bac:(\d+)>/g, '$1\x1b[48;5;$2m')
+  // general color code support for extended xterm colors:
+  tText = tText.replaceAll(/(^|[^\\\\])<fx:(\d+)>/g, '$1\x1b[38;5;$2m')
+  tText = tText.replaceAll(/(^|[^\\\\])<bx:(\d+)>/g, '$1\x1b[48;5;$2m')
   // general support for RGB colors:
   tText = tText.replaceAll(/(^|[^\\\\])<frgb:(\d+).(\d+).(\d+)>/g, '$1\x1b[38;2;$2;$3;$4m')
   tText = tText.replaceAll(/(^|[^\\\\])<brgb:(\d+).(\d+).(\d+)>/g, '$1\x1b[48;2;$2;$3;$4m')
+  // finally, handle escaped tags
+  tText = tText.replaceAll(/\\\\</g, '\\<')
+  tText = tText.replaceAll(/\\</g, '<')
 
   return tText
 }
