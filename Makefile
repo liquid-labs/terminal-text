@@ -65,4 +65,19 @@ lint-fix:
 # qa
 qa: test lint
 
+#CONVERTER_SCRIPT:='const colorSpec = require("./src/lib/xterm-256-spec.json")\
+.filter(e => e.colorId > 15)\
+.reduce((acc, e) => { \
+	acc[e.name.charAt(0).toLowerCase() + e.name.slice(1)] = \
+	{ "*": `\x1b[38;5;$${e.colorId}m` }; \
+	acc["bg" + e.name] = \
+	{ "*": `\x1b[48;5;$${e.colorId}m` }; \
+	return acc; \
+}, {});\
+console.log(colorSpec);'
+
+# generate extended color def
+#$(LIB_SRC)/ext-color-codes.mjs: $(LIB_SRC)/xterm-256-spec.json
+#	node -e $(CONVERTER_SCRIPT)
+
 # examples
