@@ -22,28 +22,30 @@ describe('formatTerminalText', () => {
 
     test('supports escaping formatting tags', () => {
       const escText = 'Hi! \\<em>Test text\\<rst> there.'
+      const deEscText = 'Hi! <em>Test text<rst> there.'
       const fText = formatTerminalText(escText)
-      expect(fText).toBe(escText)
+      expect(fText).toBe(deEscText)
     })
   })
 
-  describe('256 ansi color formatting', () => {
+  describe('256 extended XTerm colors formatting', () => {
     test('processes foreground colors', () => {
-      const ansiFgText = 'Hi! <fac:118>Test text<rst> there.'
+      const ansiFgText = 'Hi! <fx:118>Test text<rst> there.'
       const fText = formatTerminalText(ansiFgText)
       expect(fText).toMatch(/Hi! \x1b\[38;5;118mTest text\x1b\[0m there/) // eslint-disable-line no-control-regex
     })
 
     test('processes background colors', () => {
-      const ansiBgText = 'Hi! <bac:230>Test text<rst> there.'
+      const ansiBgText = 'Hi! <bx:230>Test text<rst> there.'
       const fText = formatTerminalText(ansiBgText)
       expect(fText).toMatch(/Hi! \x1b\[48;5;230mTest text\x1b\[0m there/) // eslint-disable-line no-control-regex
     })
 
     test('supports escaping formatting tags', () => {
       const escText = 'Hi! \\<fac:118>Test text\\<rst> there.'
+      const deEscText = 'Hi! <fac:118>Test text<rst> there.'
       const fText = formatTerminalText(escText)
-      expect(fText).toBe(escText)
+      expect(fText).toBe(deEscText)
     })
   })
 
@@ -63,8 +65,9 @@ describe('formatTerminalText', () => {
 
     test('supports escaping formatting tags', () => {
       const escText = 'Hi! \\<frgb:118.202.53>Test text\\<rst> there.'
+      const deEscText = 'Hi! <frgb:118.202.53>Test text<rst> there.'
       const fText = formatTerminalText(escText)
-      expect(fText).toBe(escText)
+      expect(fText).toBe(deEscText)
     })
   })
 })
