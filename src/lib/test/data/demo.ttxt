@@ -1,0 +1,25 @@
+<h1>Terminal Text Demo<rst>
+
+<h2>Semantic tags<rst>
+
+<h1>\<h1><rst> <h2>\<h2><rst> <h3>\<h3><rst> <em>\<em><rst> <code>\<code><rst> <danger>\<danger><rst> <error>\<error><rst> <warn>\<warn><rst>
+
+<h2>Standard colors<rst>
+
+<bgWhite><black>\<bgWhite>\<black><rst> <red>\<red> <green>\<green> <gold>\<gold> <blue>\<blue> <magenta>\<magenta> <cyan>\<cyan> <grey>\<grey>
+
+<bgBlack><white>\<bgBlack>\<white><rst> <bgRed>\<bgRed><rst> <bgGreen>\<bgGreen><rst> <bgGold>\<bgGold><rst> <bgBlue>\<bgBlue><rst> <bgMagenta>\<bgMagenta><rst> <bgCyan>\<bgCyan><rst> <bgGrey>\<bgGrey><rst>
+
+<h2>Bright colors<rst>
+
+<bgWhite><darkGrey>\<bgWhite>\<darkGrey><rst> <bRed>\<bRed> <bGreen>\<bGreen> <bGold>\<bGold> <bBlue>\<bBlue> <bMagenta>\<bMagenta> <bCyan>\<bCyan> <white>\<white>
+
+<bgDarkGrey><white>\<bgDarkGrey>\<white><rst> <bgBRed>\<bgBRed><rst> <bgBGreen>\<bgBGreen><rst> <bgBGold>\<bgBGold><rst> <bgBBlue>\<bgBBlue><rst> <bgBMagenta>\<bgBMagenta><rst> <bgBCyan>\<bgBCyan><rst> <bgWhite>\<bgWhite><rst>
+
+<h2>Extended XTerm colors<rst>
+
+<fx:20>\<fx:20><rst> <bx:20>\<bx:20><rst> <fx:25>\<fx:25><rst> <bx:25>\<bx:25><rst> <fx:30>\<fx:30><rst> <bx:30>\<bx:30><rst> etc.
+
+<h2>RGB colors<rst>
+
+<frgb:255.0.0>\<frgb:255.0.0><rst> <brgb:255.0.0>\<brgb:255.0.0><rst> <frgb:100.100.25>\<frgb:100.100.25><rst> <brgb:100.100.25>\<brgb:100.100.25><rst>
