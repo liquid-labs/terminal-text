@@ -1,1 +1,1 @@
-export * from './format-terminal-text.mjs'
+export * from './format-terminal-text'

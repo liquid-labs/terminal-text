@@ -6,15 +6,15 @@
 
 <h2>Standard colors<rst>
 
-<bgWhite><black>\<bgWhite>\<black><rst> <red>\<red> <green>\<green> <gold>\<gold> <blue>\<blue> <magenta>\<magenta> <cyan>\<cyan> <grey>\<grey>
+<bgWhite><black>\<bgWhite>\<black><rst> <maroon>\<maroon> <green>\<green> <olive>\<olive> <navy>\<navy> <purple>\<purple> <teal>\<teal> <silver>\<silver>
 
-<bgBlack><white>\<bgBlack>\<white><rst> <bgRed>\<bgRed><rst> <bgGreen>\<bgGreen><rst> <bgGold>\<bgGold><rst> <bgBlue>\<bgBlue><rst> <bgMagenta>\<bgMagenta><rst> <bgCyan>\<bgCyan><rst> <bgGrey>\<bgGrey><rst>
+<bgBlack><white>\<bgBlack>\<white><rst> <bgMaroon>\<bgMaroon><rst> <bgGreen>\<bgGreen><rst> <bgOlive>\<bgOlive><rst> <bgNavy>\<bgNavy><rst> <bgPurple>\<bgPurple><rst> <bgTeal>\<bgTeal><rst> <bgSilver>\<bgSilver><rst>
 
 <h2>Bright colors<rst>
 
-<bgWhite><darkGrey>\<bgWhite>\<darkGrey><rst> <bRed>\<bRed> <bGreen>\<bGreen> <bGold>\<bGold> <bBlue>\<bBlue> <bMagenta>\<bMagenta> <bCyan>\<bCyan> <white>\<white>
+<bgWhite><grey>\<bgWhite>\<grey><rst> <red>\<red> <lime>\<lime> <yellow>\<yellow> <blue>\<blue> <fuschia>\<fuschia> <aqua>\<aqua> <white>\<white>
 
-<bgDarkGrey><white>\<bgDarkGrey>\<white><rst> <bgBRed>\<bgBRed><rst> <bgBGreen>\<bgBGreen><rst> <bgBGold>\<bgBGold><rst> <bgBBlue>\<bgBBlue><rst> <bgBMagenta>\<bgBMagenta><rst> <bgBCyan>\<bgBCyan><rst> <bgWhite>\<bgWhite><rst>
+<bgGrey><white>\<bgGrey>\<white><rst> <bgRed>\<bgRed><rst> <bgLime>\<bgLime><rst> <bgYellow>\<bgYellow><rst> <bgBlue>\<bgBlue><rst> <bgFuschia>\<bgFuschia><rst> <bgAqua>\<bgAqua><rst> <bgWhite>\<bgWhite><rst>
 
 <h2>Extended XTerm colors<rst>
 

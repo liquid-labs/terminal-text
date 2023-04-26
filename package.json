@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/terminal-text.js",
   "bin": {
-    "terminal-text": "./dist/terminal-text.js"
+    "terminal-text": "./dist/terminal-text-cli.js"
   },
   "scripts": {
     "build": "make",
@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/liquid-labs/terminal-text#readme",
   "devDependencies": {
-    "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.57"
+    "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.57",
+    "@liquid-labs/catalyst-scripts-node-project": "^1.0.0-alpha.6"
   },
   "dependencies": {
     "http-errors": "^2.0.0"

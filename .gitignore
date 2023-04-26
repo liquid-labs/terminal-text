@@ -1,4 +1,3 @@
-/bin
 /last-test.txt
 /last-lint.txt
 /node_modules
@@ -6,4 +5,4 @@
 /.yalc
 /dist
 /test-staging
-/coverage
+/qa
