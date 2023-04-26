@@ -65,7 +65,7 @@ const standardXterm = {
   silver   : { '*' : '\x1b[37m' },
   // standard background colors
   bgBlack  : { '*' : '\x1b[40m' },
-  bgMarron : { '*' : '\x1b[41m' },
+  bgMaroon : { '*' : '\x1b[41m' },
   bgGreen  : { '*' : '\x1b[42m' },
   bgOlive  : { '*' : '\x1b[43m' },
   bgNavy   : { '*' : '\x1b[44m' },
@@ -76,7 +76,7 @@ const standardXterm = {
 
 const brightStandardXterm = {
   // standard bright colors; these are the same as 'bright'/'bold' + standard color
-  grep      : { '*' : '\x1b[90m' }, // 'bright black == grey'
+  grey      : { '*' : '\x1b[90m' }, // 'bright black == grey'
   red       : { '*' : '\x1b[91m' },
   lime      : { '*' : '\x1b[92m' },
   yellow    : { '*' : '\x1b[93m' },
