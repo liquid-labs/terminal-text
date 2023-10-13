@@ -1,12 +1,14 @@
 {
   "name": "@liquid-labs/terminal-text",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "",
   "main": "dist/terminal-text.js",
   "bin": {
     "terminal-text": "./dist/terminal-text-exec.js"
   },
-  "files": ["dist/*"],
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "build": "make",
     "lint": "make lint",
