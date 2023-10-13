@@ -4,15 +4,20 @@
   "description": "",
   "main": "dist/terminal-text.js",
   "bin": {
-    "terminal-text": "./dist/terminal-text-cli.js"
+    "terminal-text": "./dist/terminal-text-exec.js"
   },
+  "files": ["dist/*"],
   "scripts": {
     "build": "make",
     "lint": "make lint",
     "lint:fix": "make lint-fix",
     "test": "make test",
+    "prepack": "make",
     "preversion": "make test && make lint",
     "qa": "make qa"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "keywords": [],
   "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
@@ -22,11 +27,12 @@
     "url": "https://github.com/liquid-labs/terminal-text/issues"
   },
   "homepage": "https://github.com/liquid-labs/terminal-text#readme",
-  "devDependencies": {
-    "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.57",
-    "@liquid-labs/catalyst-scripts-node-project": "^1.0.0-alpha.6"
-  },
   "dependencies": {
     "http-errors": "^2.0.0"
+  },
+  "devDependencies": {
+    "@liquid-labs/catalyst-resource-babel-and-rollup": "^1.0.0-alpha.3",
+    "@liquid-labs/catalyst-resource-eslint": "^1.0.0-alpha.1",
+    "@liquid-labs/catalyst-resource-jest": "^1.0.0-alpha.3"
   }
 }

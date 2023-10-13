@@ -22,19 +22,38 @@ const modifiers = { // basic non-color / functional codes
 const semantic = {
   // semantic codes
   h1 : {
-    greenOnBlack : '\x1b[30m\x1b[48;5;226m'/* black on yellow1 bg */,
-    dark         : '\x1b[30m\x1b[48;5;226m'/* black on yellow1 bg */,
-    light        : '\x1b[30m\x1b[48;5;10m'/* black on lime bg */
+    greenOnBlack : '\x1b[38;5;226m\x1b[4m'/* yellow1 */,
+    dark         : '\x1b[38;5;226m\x1b[4m',
+    light        : '\x1b[38;5;46mm\x1b[4m' /* green1 */
   },
   h2 : {
-    greenOnBlack : '\x1b[38;5;226m\x1b[4m'/* yellow1 + underscore */,
-    dark         : '\x1b[38;5;226m\x1b[4m',
-    light        : '\x1b[92m\x1b[4m' /* bright green + underscore */
+    greenOnBlack : '\x1b[38;5;184m\x1b[4m'/* yellow3 */,
+    dark         : '\x1b[38;5;184m\x1b[4m',
+    light        : '\x1b[38;5;40m\x1b[4m' /* green3 */
   },
   h3 : {
-    greenOnBlack : '\x1b[38;5;226m'/* canary yellow */,
-    dark         : '\x1b[38;5;226m',
-    light        : '\x1b[92m' /* bright green */
+    greenOnBlack : '\x1b[38;5;154m\x1b[4m'/* greenYellow */,
+    dark         : '\x1b[38;5;154m\x1b[4m',
+    // greenOnBlack : '\x1b[93m'/* yellow */,
+    // dark         : '\x1b[93m',
+    light        : '\x1b[92m\x1b[4m' /* bright green */
+  },
+  h4 : {
+    // greenOnBlack : '\x1b[38;5;190m'/* yellow2 */,
+    // dark         : '\x1b[38;5;190m',
+    greenOnBlack : '\x1b[38;5;192m\x1b[4m'/* darkOliveGreen1 */,
+    dark         : '\x1b[38;5;192m\x1b[4m',
+    light        : '\x1b[38;5;40m\x1b[4m' /* green3 */
+  },
+  h5 : {
+    greenOnBlack : '\x1b[38;5;149m\x1b[4m'/* darkOliveGReen3 */,
+    dark         : '\x1b[38;5;149m\x1b[4m',
+    light        : '\x1b[38;5;28m\x1b[4m' /* green4 */
+  },
+  h6 : {
+    greenOnBlack : '\x1b[38;5;106m\x1b[4m'/* yellow4 */,
+    dark         : '\x1b[38;5;106m\x1b[4m',
+    light        : '\x1b[38;5;37m\x1b[4m' /* lightSeaGreen */
   },
   code   : { greenOnBlack : '\x1b[37m'/* light grey */, dark : '\x1b[37m', light : '\x1b[90m'/* dark grey */ },
   danger : { '*' : '\x1b[97m\x1b[41m'/* white on bright red bg */ },
@@ -47,8 +66,8 @@ const semantic = {
   },
   // alias for 'warn'
   warning : {
-    greenOnBlack : '\x1b[93m'/* bright yellow/gold */,
-    dark         : '\x1b[93m',
+    greenOnBlack : '\x1b[38;5;214m'/* orange */,
+    dark         : '\x1b[38;5;214m',
     light        : '\x1b[63m'/* yellow/gold */
   }
 }
