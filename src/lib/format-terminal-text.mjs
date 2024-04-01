@@ -10,16 +10,16 @@ const formatTerminalText = (tText, { noColor = false, style = 'dark' } = {}) => 
   // TODO: find for now, but probably more efficient to extract the tags we need.
   for (const [key, styles] of Object.entries(colorCodes)) {
     const replacer = new RegExp('(^|[^\\\\])<' + key + '>', 'g')
-    tText = tText.replaceAll(replacer, '$1' + replaceValue({ color: (styles[style] || styles['*']), noColor }))
+    tText = tText.replaceAll(replacer, '$1' + replaceValue({ color : (styles[style] || styles['*']), noColor }))
   }
   // general color code support for extended xterm colors:
-  tText = tText.replaceAll(/(^|[^\\\\])<fx:(\d+)>/g, replaceValue({ color: '$1\x1b[38;5;$2m', noColor }))
-  tText = tText.replaceAll(/(^|[^\\\\])<bx:(\d+)>/g, replaceValue({ color: '$1\x1b[48;5;$2m', noColor }))
+  tText = tText.replaceAll(/(^|[^\\\\])<fx:(\d+)>/g, replaceValue({ color : '$1\x1b[38;5;$2m', noColor }))
+  tText = tText.replaceAll(/(^|[^\\\\])<bx:(\d+)>/g, replaceValue({ color : '$1\x1b[48;5;$2m', noColor }))
   // general support for RGB colors:
   tText = tText
-    .replaceAll(/(^|[^\\\\])<frgb:(\d+).(\d+).(\d+)>/g, replaceValue({ color: '$1\x1b[38;2;$2;$3;$4m', noColor }))
+    .replaceAll(/(^|[^\\\\])<frgb:(\d+).(\d+).(\d+)>/g, replaceValue({ color : '$1\x1b[38;2;$2;$3;$4m', noColor }))
   tText = tText
-    .replaceAll(/(^|[^\\\\])<brgb:(\d+).(\d+).(\d+)>/g, replaceValue({ color: '$1\x1b[48;2;$2;$3;$4m', noColor }))
+    .replaceAll(/(^|[^\\\\])<brgb:(\d+).(\d+).(\d+)>/g, replaceValue({ color : '$1\x1b[48;2;$2;$3;$4m', noColor }))
   // finally, handle escaped tags
   tText = tText.replaceAll(/\\\\</g, '\\<')
   tText = tText.replaceAll(/\\</g, '<')
