@@ -1,6 +1,6 @@
 {
   "name": "@liquid-labs/terminal-text",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "",
   "main": "dist/terminal-text.js",
   "bin": {
