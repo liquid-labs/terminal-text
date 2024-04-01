@@ -1,0 +1,35 @@
+Test git rev: 5fc2b70e16c28acc775347660f21c495f8350d78
+PASS lib/test/format-terminal-text.test.js
+  formatTerminalText
+    semantic formatting
+      ✓ supports 'default' style (2 ms)
+      ✓ supports 'dark' style
+      ✓ supports 'light' style
+      ✓ defaults to dark style
+      ✓ dark and light styles differ
+      ✓ supports escaping formatting tags (1 ms)
+    256 extended XTerm colors formatting
+      ✓ processes foreground colors
+      ✓ processes background colors (1 ms)
+      ✓ supports escaping formatting tags
+    16.8M RGB color support
+      ✓ processes foreground colors
+      ✓ processes background colors (1 ms)
+      ✓ supports escaping formatting tags
+
+---------------------------|---------|----------|---------|---------|-------------------
+File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+---------------------------|---------|----------|---------|---------|-------------------
+All files                  |    43.1 |       30 |   22.22 |   44.44 |                   
+ cli                       |       0 |        0 |       0 |       0 |                   
+  terminal-text-cli.mjs    |       0 |        0 |       0 |       0 | 1-54              
+ lib                       |   96.15 |       75 |     100 |      96 |                   
+  color-codes.mjs          |     100 |      100 |     100 |     100 |                   
+  extended-xterm.mjs       |     100 |      100 |     100 |     100 |                   
+  format-terminal-text.mjs |   94.44 |       75 |     100 |   94.11 | 7                 
+---------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        0.227 s, estimated 1 s
+Ran all test suites.
